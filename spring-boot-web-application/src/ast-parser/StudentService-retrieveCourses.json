@@ -1,0 +1,57 @@
+[ {
+  "filePath" : "/home/info/spring-boot-examples/spring-boot-web-application/src/main/java/com/in28minutes/springboot/service/StudentService.java",
+  "packageName" : "com.in28minutes.springboot.service",
+  "imports" : [ {
+    "dereferencedParts" : [ ],
+    "name" : "java.util.ArrayList"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "java.util.List"
+  }, {
+    "dereferencedParts" : [ ],
+    "filePath" : "/home/info/spring-boot-examples/spring-boot-web-application/src/main/java/com/in28minutes/springboot/model/Course.java",
+    "name" : "com.in28minutes.springboot.model.Course"
+  }, {
+    "dereferencedParts" : [ ],
+    "filePath" : "/home/info/spring-boot-examples/spring-boot-web-application/src/main/java/com/in28minutes/springboot/model/Student.java",
+    "name" : "com.in28minutes.springboot.model.Student"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "org.springframework.stereotype.Service"
+  } ],
+  "entities" : [ {
+    "name" : "StudentService",
+    "description" : null,
+    "annotations" : [ "Service" ],
+    "methods" : [ {
+      "name" : "retrieveCourses",
+      "body" : "{\n    Student student = retrieveStudent(studentId);\n    return student == null ? null : student.courses();\n}",
+      "arguments" : [ "String studentId" ],
+      "accessModifier" : "public",
+      "methodsCalled" : [ {
+        "name" : "retrieveStudent",
+        "arguments" : [ "studentId" ]
+      }, {
+        "name" : "courses",
+        "arguments" : [ ]
+      } ],
+      "usedEntities" : [ "studentId", "student" ],
+      "annotations" : [ ],
+      "returnType" : "List<Course>",
+      "description" : null,
+      "methodDefinition" : "public List<Course> retrieveCourses(String studentId) {\n    Student student = retrieveStudent(studentId);\n    return student == null ? null : student.courses();\n}"
+    } ],
+    "fields" : [ {
+      "name" : "students",
+      "accessModifier" : "private static final",
+      "value" : "new ArrayList<>()",
+      "type" : "List<Student>",
+      "description" : null
+    } ],
+    "constructors" : [ ],
+    "extends" : null,
+    "childEntity" : null,
+    "accessSpecifier" : "PUBLIC"
+  } ],
+  "samePackageClasses" : [ ]
+} ]

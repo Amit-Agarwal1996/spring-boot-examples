@@ -1,0 +1,69 @@
+[ {
+  "filePath" : "/home/info/spring-boot-examples/spring-boot-web-application/src/main/java/com/in28minutes/springboot/service/StudentService.java",
+  "packageName" : "com.in28minutes.springboot.service",
+  "imports" : [ {
+    "dereferencedParts" : [ ],
+    "name" : "java.util.ArrayList"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "java.util.List"
+  }, {
+    "dereferencedParts" : [ ],
+    "filePath" : "/home/info/spring-boot-examples/spring-boot-web-application/src/main/java/com/in28minutes/springboot/model/Course.java",
+    "name" : "com.in28minutes.springboot.model.Course"
+  }, {
+    "dereferencedParts" : [ ],
+    "filePath" : "/home/info/spring-boot-examples/spring-boot-web-application/src/main/java/com/in28minutes/springboot/model/Student.java",
+    "name" : "com.in28minutes.springboot.model.Student"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "org.springframework.stereotype.Service"
+  } ],
+  "entities" : [ {
+    "name" : "StudentService",
+    "description" : null,
+    "annotations" : [ "Service" ],
+    "methods" : [ {
+      "name" : "retrieveStudent",
+      "body" : "{\n    return students.stream().filter(student -> student.id().equals(studentId)).findAny().orElse(null);\n}",
+      "arguments" : [ "String studentId" ],
+      "accessModifier" : "public",
+      "methodsCalled" : [ {
+        "name" : "orElse",
+        "arguments" : [ "null" ]
+      }, {
+        "name" : "findAny",
+        "arguments" : [ ]
+      }, {
+        "name" : "filter",
+        "arguments" : [ "student -> student.id().equals(studentId)" ]
+      }, {
+        "name" : "stream",
+        "arguments" : [ ]
+      }, {
+        "name" : "equals",
+        "arguments" : [ "studentId" ]
+      }, {
+        "name" : "id",
+        "arguments" : [ ]
+      } ],
+      "usedEntities" : [ "students", "student", "studentId" ],
+      "annotations" : [ ],
+      "returnType" : "Student",
+      "description" : null,
+      "methodDefinition" : "public Student retrieveStudent(String studentId) {\n    return students.stream().filter(student -> student.id().equals(studentId)).findAny().orElse(null);\n}"
+    } ],
+    "fields" : [ {
+      "name" : "students",
+      "accessModifier" : "private static final",
+      "value" : "new ArrayList<>()",
+      "type" : "List<Student>",
+      "description" : null
+    } ],
+    "constructors" : [ ],
+    "extends" : null,
+    "childEntity" : null,
+    "accessSpecifier" : "PUBLIC"
+  } ],
+  "samePackageClasses" : [ ]
+} ]

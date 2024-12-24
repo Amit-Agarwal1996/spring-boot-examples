@@ -1,0 +1,94 @@
+[ {
+  "filePath" : "/home/info/spring-boot-examples/spring-boot-web-application/src/main/java/com/in28minutes/springboot/security/SecurityConfig.java",
+  "packageName" : "com.in28minutes.springboot.security",
+  "imports" : [ {
+    "dereferencedParts" : [ ],
+    "name" : "org.springframework.security.config.Customizer.withDefaults"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "java.util.function.Function"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "org.springframework.context.annotation.Bean"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "org.springframework.context.annotation.Configuration"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "org.springframework.security.config.annotation.web.builders.HttpSecurity"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "org.springframework.security.core.userdetails.User"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "org.springframework.security.core.userdetails.UserDetails"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "org.springframework.security.crypto.password.PasswordEncoder"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "org.springframework.security.provisioning.InMemoryUserDetailsManager"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "org.springframework.security.web.SecurityFilterChain"
+  } ],
+  "entities" : [ {
+    "name" : "SecurityConfig",
+    "description" : null,
+    "annotations" : [ "Configuration" ],
+    "methods" : [ {
+      "name" : "filterChain",
+      "body" : "{\n    http.authorizeHttpRequests(auth -> auth.anyRequest().authenticated());\n    http.httpBasic(withDefaults());\n    http.csrf().disable();\n    http.headers().frameOptions().disable();\n    return http.build();\n}",
+      "arguments" : [ "HttpSecurity http" ],
+      "accessModifier" : "public",
+      "methodsCalled" : [ {
+        "name" : "authorizeHttpRequests",
+        "arguments" : [ "auth -> auth.anyRequest().authenticated()" ]
+      }, {
+        "name" : "authenticated",
+        "arguments" : [ ]
+      }, {
+        "name" : "anyRequest",
+        "arguments" : [ ]
+      }, {
+        "name" : "httpBasic",
+        "arguments" : [ "withDefaults()" ]
+      }, {
+        "name" : "withDefaults",
+        "arguments" : [ ]
+      }, {
+        "name" : "disable",
+        "arguments" : [ ]
+      }, {
+        "name" : "csrf",
+        "arguments" : [ ]
+      }, {
+        "name" : "disable",
+        "arguments" : [ ]
+      }, {
+        "name" : "frameOptions",
+        "arguments" : [ ]
+      }, {
+        "name" : "headers",
+        "arguments" : [ ]
+      }, {
+        "name" : "build",
+        "arguments" : [ ]
+      } ],
+      "usedEntities" : [ "http", "auth" ],
+      "annotations" : [ "Bean" ],
+      "returnType" : "SecurityFilterChain",
+      "description" : null,
+      "methodDefinition" : "// All URLs are protected\n// A login form is shown for unauthorized requests\n// CSRF disable\n// Frames\n@Bean\npublic SecurityFilterChain filterChain(HttpSecurity http) throws Exception {\n    http.authorizeHttpRequests(auth -> auth.anyRequest().authenticated());\n    http.httpBasic(withDefaults());\n    http.csrf().disable();\n    http.headers().frameOptions().disable();\n    return http.build();\n}"
+    } ],
+    "fields" : [ ],
+    "constructors" : [ ],
+    "extends" : null,
+    "childEntity" : null,
+    "accessSpecifier" : "PUBLIC"
+  } ],
+  "samePackageClasses" : [ ]
+} ]

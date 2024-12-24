@@ -1,0 +1,85 @@
+[ {
+  "filePath" : "/home/info/spring-boot-examples/spring-boot-web-application/src/main/java/com/in28minutes/springboot/security/SecurityConfig.java",
+  "packageName" : "com.in28minutes.springboot.security",
+  "imports" : [ {
+    "dereferencedParts" : [ ],
+    "name" : "org.springframework.security.config.Customizer.withDefaults"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "java.util.function.Function"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "org.springframework.context.annotation.Bean"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "org.springframework.context.annotation.Configuration"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "org.springframework.security.config.annotation.web.builders.HttpSecurity"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "org.springframework.security.core.userdetails.User"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "org.springframework.security.core.userdetails.UserDetails"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "org.springframework.security.crypto.password.PasswordEncoder"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "org.springframework.security.provisioning.InMemoryUserDetailsManager"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "org.springframework.security.web.SecurityFilterChain"
+  } ],
+  "entities" : [ {
+    "name" : "SecurityConfig",
+    "description" : null,
+    "annotations" : [ "Configuration" ],
+    "methods" : [ {
+      "name" : "createNewUser",
+      "body" : "{\n    Function<String, String> passwordEncoder = input -> passwordEncoder().encode(input);\n    return User.builder().passwordEncoder(passwordEncoder).username(username).password(password).roles(\"USER\", \"ADMIN\").build();\n}",
+      "arguments" : [ "String username", "String password" ],
+      "accessModifier" : "private",
+      "methodsCalled" : [ {
+        "name" : "encode",
+        "arguments" : [ "input" ]
+      }, {
+        "name" : "passwordEncoder",
+        "arguments" : [ ]
+      }, {
+        "name" : "build",
+        "arguments" : [ ]
+      }, {
+        "name" : "roles",
+        "arguments" : [ "\"USER\"", "\"ADMIN\"" ]
+      }, {
+        "name" : "password",
+        "arguments" : [ "password" ]
+      }, {
+        "name" : "username",
+        "arguments" : [ "username" ]
+      }, {
+        "name" : "passwordEncoder",
+        "arguments" : [ "passwordEncoder" ]
+      }, {
+        "name" : "builder",
+        "arguments" : [ ]
+      } ],
+      "usedEntities" : [ "input", "User", "passwordEncoder", "username", "password" ],
+      "annotations" : [ ],
+      "returnType" : "UserDetails",
+      "description" : null,
+      "methodDefinition" : "private UserDetails createNewUser(String username, String password) {\n    Function<String, String> passwordEncoder = input -> passwordEncoder().encode(input);\n    return User.builder().passwordEncoder(passwordEncoder).username(username).password(password).roles(\"USER\", \"ADMIN\").build();\n}"
+    } ],
+    "fields" : [ ],
+    "constructors" : [ ],
+    "extends" : null,
+    "childEntity" : null,
+    "accessSpecifier" : "PUBLIC"
+  } ],
+  "samePackageClasses" : [ ]
+} ]

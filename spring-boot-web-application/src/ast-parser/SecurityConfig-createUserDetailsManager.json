@@ -1,0 +1,64 @@
+[ {
+  "filePath" : "/home/info/spring-boot-examples/spring-boot-web-application/src/main/java/com/in28minutes/springboot/security/SecurityConfig.java",
+  "packageName" : "com.in28minutes.springboot.security",
+  "imports" : [ {
+    "dereferencedParts" : [ ],
+    "name" : "org.springframework.security.config.Customizer.withDefaults"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "java.util.function.Function"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "org.springframework.context.annotation.Bean"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "org.springframework.context.annotation.Configuration"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "org.springframework.security.config.annotation.web.builders.HttpSecurity"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "org.springframework.security.core.userdetails.User"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "org.springframework.security.core.userdetails.UserDetails"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "org.springframework.security.crypto.password.PasswordEncoder"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "org.springframework.security.provisioning.InMemoryUserDetailsManager"
+  }, {
+    "dereferencedParts" : [ ],
+    "name" : "org.springframework.security.web.SecurityFilterChain"
+  } ],
+  "entities" : [ {
+    "name" : "SecurityConfig",
+    "description" : null,
+    "annotations" : [ "Configuration" ],
+    "methods" : [ {
+      "name" : "createUserDetailsManager",
+      "body" : "{\n    UserDetails userDetails1 = createNewUser(\"admin1\", \"secret1\");\n    return new InMemoryUserDetailsManager(userDetails1);\n}",
+      "arguments" : [ ],
+      "accessModifier" : "public",
+      "methodsCalled" : [ {
+        "name" : "createNewUser",
+        "arguments" : [ "\"admin1\"", "\"secret1\"" ]
+      } ],
+      "usedEntities" : [ "userDetails1" ],
+      "annotations" : [ "Bean" ],
+      "returnType" : "InMemoryUserDetailsManager",
+      "description" : null,
+      "methodDefinition" : "// LDAP or Database\n// In Memory\n// InMemoryUserDetailsManager\n// InMemoryUserDetailsManager(UserDetails... users)\n@Bean\npublic InMemoryUserDetailsManager createUserDetailsManager() {\n    UserDetails userDetails1 = createNewUser(\"admin1\", \"secret1\");\n    return new InMemoryUserDetailsManager(userDetails1);\n}"
+    } ],
+    "fields" : [ ],
+    "constructors" : [ ],
+    "extends" : null,
+    "childEntity" : null,
+    "accessSpecifier" : "PUBLIC"
+  } ],
+  "samePackageClasses" : [ ]
+} ]

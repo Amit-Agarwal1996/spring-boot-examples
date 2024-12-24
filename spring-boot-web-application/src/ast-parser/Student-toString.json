@@ -1,0 +1,17 @@
+[ {
+  "filePath" : "/home/info/spring-boot-examples/spring-boot-web-application/src/main/java/com/in28minutes/springboot/model/Student.java",
+  "packageName" : "com.in28minutes.springboot.model",
+  "imports" : [ {
+    "dereferencedParts" : [ ],
+    "name" : "java.util.List"
+  } ],
+  "entities" : [ ],
+  "samePackageClasses" : [ {
+    "imports" : [ {
+      "dereferencedParts" : [ ],
+      "name" : "java.util.List"
+    } ],
+    "entities" : [ ],
+    "filePath" : "/home/info/spring-boot-examples/spring-boot-web-application/src/main/java/com/in28minutes/springboot/model/Course.java"
+  } ]
+} ]

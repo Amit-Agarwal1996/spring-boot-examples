@@ -1,0 +1,10 @@
+[ {
+  "filePath" : "/home/info/spring-boot-examples/spring-boot-web-application/src/main/java/com/in28minutes/springboot/model/Course.java",
+  "packageName" : "com.in28minutes.springboot.model",
+  "imports" : [ {
+    "dereferencedParts" : [ ],
+    "name" : "java.util.List"
+  } ],
+  "entities" : [ ],
+  "samePackageClasses" : [ ]
+} ]
